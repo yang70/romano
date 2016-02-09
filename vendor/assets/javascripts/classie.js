@@ -8,6 +8,7 @@
  * classie.toggle( elem, 'my-class' )
  */
 
+// $(document).ready(function(){
 /*jshint browser: true, strict: true, undef: true */
 /*global define: false */
 
@@ -78,3 +79,5 @@ if ( typeof define === 'function' && define.amd ) {
 }
 
 })( window );
+
+// })

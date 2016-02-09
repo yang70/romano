@@ -14,4 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require cbpAnimatedHeader
+//= require classie
+//= require jquery.easing.min
+//= require jquery.fittext
+//= require wow.min
+//= require creative
 //= require_tree .
