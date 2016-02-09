@@ -12,6 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'pry-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
