@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :projects
 
+  devise_for :users, :skip => [:sessions]
+  as :user do
+    get 'login' => 'devise/sessions#new', :as => :new_user_session
+    post 'login' => 'devise/sessions#create', :as => :user_session
+    match 'signout' => 'devise/sessions#destroy', :as => :destroy_user_session,
+      :via => Devise.mappings[:user].sign_out_via
+  end
+
+  resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
