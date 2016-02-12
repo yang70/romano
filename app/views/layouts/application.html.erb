@@ -14,9 +14,9 @@
 
   <% unless current_page?(root_url) %>
     <%= render 'layouts/navbar' %>
+    <%= render 'layouts/flash' %>
   <% end %>
 
-  <%= render 'layouts/flash' %>
 
   <%= yield %>
 

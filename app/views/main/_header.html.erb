@@ -2,6 +2,12 @@
 <header>
   <div class="header-content">
     <div class="header-content-inner">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %> alert-dismissible" role="alert">
+          <button type="button" data-dismiss="alert" class="close" aria-labe="Close"><span aria-hidden="true">&times;</span></button>
+          <%= value %>
+        </div>
+      <% end %>
       <h1>Romano Capital</h1>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
