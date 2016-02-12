@@ -10,7 +10,23 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<body id="page-top">
 
-<%= yield %>
+  <% unless current_page?(root_url) %>
+    <%= render 'layouts/navbar' %>
+  <% end %>
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %> alert-dismissible offset" role="alert">
+      <button type="button" data-dismiss="alert" class="close" aria-labe="Close"><span aria-hidden="true">&times;</span></button>
+      <%= value %>
+    </div>
+  <% end %>
+
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
+
+</body>
 
 </html>
