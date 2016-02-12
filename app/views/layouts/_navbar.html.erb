@@ -1,0 +1,43 @@
+
+<nav id="otherNav" class="navbar navbar-default navbar-fixed-top affix">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a id="logoContainer" class="navbar-brand page-scroll" href="#page-top">
+        <img id="headerLogo" src="<%= asset_path 'romano_logo.png' %>" alt="romano_logo"/>
+      </a>
+      <a class="navbar-brand page-scroll" href="#page-top">Romano Capital</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class="page-scroll" href="/">Home</a>
+        </li>
+        <%# <li> %>
+        <%#   <a class="page-scroll" href="/#about">About</a> %>
+        <%# </li> %>
+        <%# <li> %>
+        <%#   <a class="page-scroll" href="/#contact">Contact</a> %>
+        <%# </li> %>
+        <%# <li> %>
+        <%#   <a class="page-scroll" href="/#projects">Projects</a> %>
+        <%# </li> %>
+        <% if current_user.present? %>
+          <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %></li>
+        <% else %>
+          <li><a id="login" href="<%= new_user_session_path %>">Member Login</a></li>
+        <% end %>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
