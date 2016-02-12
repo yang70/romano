@@ -3,7 +3,4 @@
  // You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready(function(){
-  $("#login").click(function(){
-    alert("Login not implemented yet");
-  });
 })
