@@ -3,7 +3,7 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-$(document).ready(function(){
+$(document).on("ready page:change", function() {
 (function($) {
     "use strict"; // Start of use strict
 
@@ -46,4 +46,4 @@ $(document).ready(function(){
     new WOW().init();
 
 })(jQuery); // End of use strict
-})
+});
