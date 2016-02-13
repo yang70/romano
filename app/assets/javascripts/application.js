@@ -20,4 +20,6 @@
 //= require jquery.fittext
 //= require wow.min
 //= require creative
+//= require underscore-min
+//= require gmaps/google
 //= require_tree .
