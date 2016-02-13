@@ -14,6 +14,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
 gem 'puma'
 gem 'devise'
+gem 'geocoder'
 
 group :development, :test do
   gem 'byebug'
