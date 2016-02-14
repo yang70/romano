@@ -25,3 +25,22 @@
     padding-top: 25px;
   }
 }
+
+.project-details-button-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.project-details-button {
+  width: 100%;
+  background-color: #71BA53;
+  border-radius: 10px;
+  h3 {
+    margin-top: 10px;
+  }
+}
+
+.project-details-button:focus {
+  outline: 0;
+}
+
