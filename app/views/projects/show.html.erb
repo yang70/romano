@@ -1,26 +1,11 @@
 <div class="container offset project-container">
   <h1><%= @project.name %></h1>
   <h3 class="address-header"><%= @project.address %></h3>
-  <div class="col-md-6" style="text-align: center;">
-    <div class="col-md-12">
-      <div class="col-md-6 circle-graph-container">
-        <div class="col-centered" id="fundProgress" data-info="Complete" data-bordersize="15" data-dimension="175" data-text="<%= @fund_percentage %>%" data-fontsize="38" data-percent="<%= @fund_percentage %>" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
-        <i class="fa fa-2x">Funding</i>
-        </br>
-        <i class="fa fa-usd fa-2x"></i>
-      </div>
-      <div class="col-md-6 circle-graph-container">
-        <div class="col-centered" id="constructionProgress" data-info="Complete" data-bordersize="15" data-dimension="175" data-text="<%= @construction_percentage %>%" data-fontsize="38" data-percent="<%= @construction_percentage %>" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
-        <i class="fa fa-2x">Construction</i>
-        </br>
-        <i class="fa fa-home fa-2x"></i>
-      </div>
-    </div>
-  </div>
+  
+  <%= render 'projects/project_progress_circle' %>
+
   <%= render 'projects/project_map' %>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#fundProgress, #constructionProgress').circliful();
-    });
-  </script>
+
+  <%= render 'projects/project_progress_script' %>
+
 </div>
