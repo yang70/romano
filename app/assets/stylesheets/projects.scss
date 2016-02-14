@@ -3,6 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .project-container {
-  height: 600px;
   padding-top: 25px;
+}
+
+.circle-graph-container {
+  margin-bottom: 20px;
+}
+
+.container h1,h3 {
+  text-align: center;
+}
+
+.address-header {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+@media(min-width:1000px) {
+  .project-container {
+    height: 600px;
+    padding-top: 25px;
+  }
 }

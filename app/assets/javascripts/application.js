@@ -22,4 +22,5 @@
 //= require creative
 //= require underscore-min
 //= require gmaps/google
+//= require jquery.circliful
 //= require_tree .

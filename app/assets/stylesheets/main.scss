@@ -10,8 +10,21 @@
   padding-top: 5px;
 }
 
+#projects {
+  padding-top: 50px;
+}
+
 #map-container {
   padding: 0 25px;
+}
+
+.map-link {
+  color: black;
+}
+
+.map-link:focus,
+.map-link:hover {
+  color: black;
 }
 
 // Footer

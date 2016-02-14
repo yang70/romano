@@ -22,6 +22,7 @@
 @import "flash";
 @import "member_home";
 @import "projects";
+@import "jquery.circliful";
 
 body {
   background-color: #bababa;
@@ -29,4 +30,9 @@ body {
 
 .offset {
   margin-top: 51px;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
 }
