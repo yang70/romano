@@ -33,7 +33,7 @@
         <% if current_user.present? %>
           <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %></li>
         <% else %>
-          <li><a id="login" href="<%= new_user_session_path %>">Member Login</a></li>
+          <li class="<%= 'active' if current_page?(new_user_session_path) %>"><a id="login" href="<%= new_user_session_path %>">Member Login</a></li>
         <% end %>
       </ul>
     </div>
