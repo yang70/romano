@@ -29,6 +29,28 @@ project_addresses = [
   "12208 NE 102nd St, Vancouver WA"
 ]
 
+project_funding_percentage = [
+  75,
+  50,
+  15,
+  100,
+  90,
+  35,
+  65,
+  10
+]
+
+project_construction_percentage = [
+  10,
+  65,
+  35,
+  90,
+  100,
+  15,
+  50,
+  75
+]
+
 project_names.each_with_index do |name, index|
-  Project.create!(name: name, address: project_addresses[index])
+  Project.create!(name: name, address: project_addresses[index], fund_percentage: project_funding_percentage[index], construction_percentage: project_construction_percentage[index])
 end
