@@ -6,6 +6,48 @@
   padding-top: 25px;
 }
 
+#project-index-container {
+  a {
+    color: black;
+  }
+}
+
+#projects-list-button {
+  margin-bottom: 10px;
+}
+
+
+.project-index-image-container {
+  padding: 5px 0;
+}
+
+@media(min-width:993px) {
+  .project-image-index {
+    width: 100%;
+  }
+
+  .project-index-single {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media(max-width:992px) {
+  .project-image-index {
+    width: 200px;
+  }
+  
+  .project-index-single {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .circle-graph-container {
   margin-bottom: 20px;
 }

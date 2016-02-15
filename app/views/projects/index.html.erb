@@ -1,0 +1,9 @@
+<div id="project-index-container" class="container offset">
+  <h1>Current Projects</h1>
+  <div class="col-md-12">
+    <% @projects.each do |project| %>
+      <%= render project %>
+    <% end %>
+  </div>
+</div>
+
