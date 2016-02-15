@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// header
 #headerLogo {
   width: 30px;
 }
@@ -27,6 +28,23 @@
   color: black;
 }
 
+// contact section
+#contact {
+  background-image: url('<%= asset_path "contact_bg_2.jpg" %>');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#contact-background {
+  opacity: 0.96;
+}
+
+#contact-container {
+  padding: 100px 0;
+}
+
+// about section
 @media(min-width:995px) {
   .about-portrait {
     width: 200px;
