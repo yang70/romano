@@ -27,6 +27,24 @@
   color: black;
 }
 
+@media(min-width:995px) {
+  .about-portrait {
+    width: 200px;
+    border-radius: 100%;
+  }
+}
+
+@media(max-width:994px) {
+  .about-portrait {
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  .about-portrait-title {
+    font-size: 16px;
+  }
+}
+
 // Footer
 .footer-distributed{
 	background-color: #292c2f;
