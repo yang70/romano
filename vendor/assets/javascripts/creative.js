@@ -23,10 +23,12 @@ $(document).on("ready page:change", function() {
     })
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    // **Modified to only close on click of class with 'collapse-the-nav'
+    // This was done in order to allow nested dropdowns when navbar collapses** - MGY
+    $('.collapse-the-nav').click(function() {
         $('.navbar-toggle:visible').click();
     });
-
+    
     // Fit Text Plugin for Main Header
     $("h1").fitText(
         1.2, {
