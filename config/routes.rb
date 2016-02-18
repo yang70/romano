@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :assets
+
+  resources :funds
+
   devise_for :users, :skip => [:sessions]
   as :user do
     get 'login' => 'devise/sessions#new', :as => :new_user_session

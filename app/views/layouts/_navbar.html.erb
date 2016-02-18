@@ -19,28 +19,25 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a class="page-scroll" href="/">Home</a>
+          <a class="page-scroll collapse-the-nav" href="/">Home</a>
         </li>
-        <%# <li> %>
-        <%#   <a class="page-scroll" href="/#about">About</a> %>
-        <%# </li> %>
-        <%# <li> %>
-        <%#   <a class="page-scroll" href="/#contact">Contact</a> %>
-        <%# </li> %>
-        <%# <li> %>
-        <%#   <a class="page-scroll" href="/#projects">Projects</a> %>
-        <%# </li> %>
+        <li>
+          <a class="page-scroll collapse-the-nav" href="/#about">About</a>
+        </li>
+        <li>
+          <a class="page-scroll collapse-the-nav" href="/#contact">Contact</a>
+        </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a class="page-scroll" href="<%= root_path %>#projects">Map</a></li>
-            <li><a href="<%= projects_path %>">Project List</a></li>
+            <li><a class="page-scroll collapse-the-nav" href="<%= root_path %>#projects">Map</a></li>
+            <li><a class="collapse-the-nav" href="<%= projects_path %>">Project List</a></li>
           </ul>
         </li>
         <% if current_user.present? %>
-          <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete) %></li>
+          <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete, class: "collapse-the-nav") %></li>
         <% else %>
-          <li class="<%= 'active' if current_page?(new_user_session_path) %>"><a id="login" href="<%= new_user_session_path %>">Member Login</a></li>
+          <li class="<%= 'active' if current_page?(new_user_session_path) %>"><a id="login" class="collapse-the-nav" href="<%= new_user_session_path %>">Member Login</a></li>
         <% end %>
       </ul>
     </div>
