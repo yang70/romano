@@ -1,3 +1,7 @@
 <div id="member-home-container" class="container offset">
   <h1>Member Home</h1>
+  <h3>Portfolio</h3>
+  <% @portfolio.each do |fund| %>
+    <h4><%= link_to fund.name, fund %></h4>
+  <% end %>
 </div>
