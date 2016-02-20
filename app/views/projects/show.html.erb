@@ -1,11 +1,13 @@
 <div class="container offset project-container">
   <h1><%= @project.name %></h1>
   <h3 class="address-header"><%= @project.address %></h3>
+  <hr class="project-separator"/>
   
   <%= render 'projects/project_progress_circle' %>
 
   <%= render 'projects/project_map' %>
-
+  
   <%= render 'projects/project_progress_script' %>
 
 </div>
+
