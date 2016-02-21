@@ -4,6 +4,5 @@ class MemberHomeController < ApplicationController
   def index
     @user = current_user
     @portfolio = @user.funds
-    @email = @user.email
   end
 end
