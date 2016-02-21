@@ -2,6 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#member-home-container {
-  height: 400px;
+.member-info-container {
+  hr {
+    border-color: black;
+    border-width: 1px;
+    max-width: 75%;
+    margin-top: 2px;
+  }
+}
+
+.member-info-container > div {
+  margin-bottom: 70px;
 }

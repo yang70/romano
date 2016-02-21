@@ -1,7 +1,29 @@
-<div id="member-home-container" class="container offset">
+<div class="container offset text-center">
   <h1>Member Home</h1>
-  <h3>Portfolio</h3>
-  <% @portfolio.each do |fund| %>
-    <h4><%= link_to fund.name, fund %></h4>
-  <% end %>
+  <hr/>
+  <div class="col-md-12 member-info-container">
+    <div class="col-md-6">
+      <h3>Funds In My Portfolio</h3>
+      <hr/>
+      <% @portfolio.each do |fund| %>
+        <a class="fund-link-btn" href="<%= fund_path fund %>"><button class="fund-details-button"><%= fund.name %></button></a>
+      <% end %>
+    </div>
+    <div class="col-md-6">
+      <h3>My Information</h3>
+      <hr/>
+      <div class="col-xs-4">
+        <h4 class="text-right">First Name:</h4>
+        <h4 class="text-right">Last Name:</h4>
+        <h4 class="text-right">Email: </h4>
+        <h4 class="text-right">Phone: </h4>
+      </div>
+      <div class="col-xs-8">
+        <h4 class="text-left"><%= @user.email %></h4>
+        <h4 class="text-left"><%= @user.first_name %></h4>
+        <h4 class="text-left"><%= @user.last_name %></h4>
+        <h4 class="text-left"><%= format_phone @user %></h4>
+      </div>
+    </div>
+  </div>
 </div>
