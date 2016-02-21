@@ -1,0 +1,8 @@
+<div class="container offset text-center">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>Fund List</h1>
+    <% @funds.each do |fund| %>
+      <a class="fund-link-btn" href="<%= fund_path fund %>"><button class="fund-details-button"><%= fund.name %></button></a>
+    <% end %>
+  </div>
+</div>
