@@ -23,4 +23,5 @@
 //= require underscore-min
 //= require gmaps/google
 //= require jquery.circliful
+//= require bootstrap-progressbar
 //= require_tree .

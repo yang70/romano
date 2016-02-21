@@ -1,19 +1,21 @@
 <div class="col-md-6" style="text-align: center;">
   <div class="col-md-12">
-    <div class="col-md-6 circle-graph-container">
-      <div class="col-centered" id="fundProgress" data-info="Complete" data-bordersize="15" data-dimension="175" data-text="<%= @fund_percentage %>%" data-fontsize="38" data-percent="<%= @fund_percentage %>" data-fgcolor="#65BAF2" data-bgcolor="#eee" data-fill="#ddd"></div>
-      <i class="fa fa-2x">Funding</i>
-      </br>
+    <div class="col-md-6">
       <i class="fa fa-usd fa-2x"></i>
+      <i class="fa fa-2x">Associated Funds For This Project</i>
+      <hr/>
+      <% @funds.each do |fund| %>
+        <a class="fund-link-btn" href="<%= fund_path fund %>"><button class="fund-details-button"><%= fund.name %></button></a>
+      <% end %>
     </div>
     <div class="col-md-6 circle-graph-container">
-      <div class="col-centered" id="constructionProgress" data-info="Complete" data-bordersize="15" data-dimension="175" data-text="<%= @construction_percentage %>%" data-fontsize="38" data-percent="<%= @construction_percentage %>" data-fgcolor="#FF5241" data-bgcolor="#eee" data-fill="#ddd"></div>
-      <i class="fa fa-2x">Construction</i>
-      </br>
       <i class="fa fa-home fa-2x"></i>
+      </br>
+      <i class="fa fa-2x">Overall Construction</i>
+      <div class="col-centered" id="constructionProgress" data-info="Complete" data-bordersize="15" data-dimension="175" data-text="<%= @construction_percentage %>%" data-fontsize="38" data-percent="<%= @construction_percentage %>" data-fgcolor="#FF5241" data-bgcolor="#eee" data-fill="#ddd"></div>
     </div>
   </div>
   <div class="col-md-12 project-details-button-container">
-    <button class="project-details-button"><h3>Project Details</h3></button>
+    <a class="fund-link-btn" href="<%= project_assets_path @project %>"><button class="project-details-button"><h3>See Project Details</h3></button></a>
   </div>
 </div>

@@ -1,3 +1,21 @@
 // Place all the styles related to the assets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.asset-description {
+  margin-bottom: 1px;
+}
+
+.asset-index-image {
+  width: 150px;
+}
+
+.asset-container {
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 5px;
+}
+
+#asset-index-subheader {
+  text-decoration: underline;
+}

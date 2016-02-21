@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :assets
-
   resources :funds
 
   devise_for :users, :skip => [:sessions]
@@ -12,7 +10,10 @@ Rails.application.routes.draw do
       :via => Devise.mappings[:user].sign_out_via
   end
 
-  resources :projects
+  resources :projects do
+    resources :assets
+  end
+
   get 'member_home' => 'member_home#index'
   root 'main#index'
 

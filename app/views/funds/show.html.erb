@@ -1,3 +1,9 @@
-<div class="container offset">
+<div class="container offset text-center">
   <h1><%= @fund.name %></h1>
+  <h2 style="text-decoration: underline;">Associated Projects</h2>
+  <% @projects.each do |project| %>
+    <div class="col-md-6 col-md-offset-3">
+      <a class="fund-link-btn" href="<%= project_path project %>"><button class="fund-project-details-button"><h3><%= project.name %></h3></button></a>
+    </div>
+  <% end %>
 </div>

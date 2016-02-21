@@ -5,4 +5,5 @@ class Project < ActiveRecord::Base
   after_validation :geocode
 
   has_many :assets
+  has_many :funds, -> { uniq}, through: :assets
 end

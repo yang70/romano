@@ -1,3 +1,11 @@
 // Place all the styles related to the funds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.fund-project-details-button {
+  width: 100%;
+  background-color: #71BA53;
+  border-radius: 10px;
+  h3 {
+    margin-top: 10px;
+  }
+}
