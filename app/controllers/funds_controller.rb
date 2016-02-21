@@ -3,4 +3,8 @@ class FundsController < ApplicationController
     @fund = Fund.find(params[:id])
     @projects = @fund.projects
   end
+
+  def index
+    @funds = Fund.all
+  end
 end

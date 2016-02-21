@@ -28,14 +28,23 @@
           <a class="page-scroll collapse-the-nav" href="/#contact">Contact</a>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Info<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a class="page-scroll collapse-the-nav" href="<%= root_path %>#projects">Map</a></li>
-            <li><a class="collapse-the-nav" href="<%= projects_path %>">Project List</a></li>
+            <li><a class="collapse-the-nav" href="<%= funds_path %>">Funds List</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a class="collapse-the-nav" href="/#projects">Project Map</a></li>
+            <li><a class="collapse-the-nav" href="<%= projects_path %>">Projects List</a></li>
           </ul>
         </li>
         <% if current_user.present? %>
-          <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete, class: "collapse-the-nav") %></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" href="#" data-toggle="dropdown">My Account<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a class="collapse-the-nav" href="<%= member_home_path %>">My Homepage</a></li>
+              <li role="separator" class="divider"></li>
+              <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete, class: "collapse-the-nav") %></li>
+            </ul>
+          </li>
         <% else %>
           <li class="<%= 'active' if current_page?(new_user_session_path) %>"><a id="login" class="collapse-the-nav" href="<%= new_user_session_path %>">Member Login</a></li>
         <% end %>
