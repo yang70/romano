@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(email: "member@example.com", password: "password", password_confirmation: "password")
+User.create!(email: "member@example.com", password: "password", password_confirmation: "password", first_name: "Lebron", last_name: "James", phone_number: "12334566789")
 
 project_names = [
   "Hazel Ridge",
@@ -56,10 +56,21 @@ project_names.each_with_index do |name, index|
 end
 
 fund_name = [
-  'Columbia Advantage, LLC'
+  'Columbia Advantage, LLC',
+  '46 Oaks Holding, LLC',
+  'Capital Preservation 100, LLC',
+  'Columbia Assets, LLC',
+  'Creekwood, LLC',
+  'RCR Investments, LLC',
+  'Romano Properties, LLC',
+  'SFA Elkridge, LLC',
+  'SFA Oaks, LLC',
+  'University Estates, LLC'
 ]
 
-Fund.create!(name: fund_name[0])
+fund_name.each do |fund_name|
+  Fund.create!(name: fund_name)
+end
 
 columbia_hazel_assets = [
   '101 NW 76th St',
