@@ -1,6 +1,7 @@
 // Place all the styles related to the funds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .fund-project-details-button {
   width: 100%;
   background-color: #71BA53;
@@ -9,3 +10,44 @@
     margin-top: 10px;
   }
 }
+
+@media(min-width:993px) {
+  .fund-image-index {
+    width: 100%;
+  }
+
+  .fund-index-single {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+@media(max-width:992px) {
+  .fund-image-index {
+    width: 200px;
+  }
+  
+  .fund-index-single {
+    background-color: white;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+  }
+}
+
+.fundProgress {
+  padding-top: 5px;
+}
+
+#fund-index-container a {
+  color: black;
+}
+
+.fund-index-image-container {
+  padding: 5px 0;
+}
+

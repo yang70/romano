@@ -1,8 +1,21 @@
-<div class="container offset text-center">
-  <div class="col-md-8 col-md-offset-2">
-    <h1>Fund List</h1>
+<div id="fund-index-container" class="container offset text-center">
+  <h1>Current Funds</h1>
+  <div class="col-md-12">
     <% @funds.each do |fund| %>
-      <a class="fund-link-btn" href="<%= fund_path fund %>"><button class="fund-details-button"><%= fund.name %></button></a>
+      <a href="<%= fund_path fund %>">
+        <div class="col-md-8 col-md-offset-2 text-center fund-index-single">
+          <div class="col-md-4 fund-index-image-container">
+            <img class="fund-image-index" src="<%= image_url 'sample_asset.jpg' %>" />
+          </div>
+          <div class="col-md-8">
+            <h3><%= fund.name %></h3>
+            <p style="text-decoration: underline; margin-bottom: 1px;">Overall Fund Progress</p>
+            <div class="progress" style="margin-bottom: 5px;">
+              <div class="progress-bar" role="progressbar" data-transitiongoal="85"></div>
+            </div>
+          </div>
+        </div>
+      </a>
     <% end %>
   </div>
 </div>
