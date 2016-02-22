@@ -135,3 +135,7 @@ hazel = Project.find_by(name: "Hazel Ridge")
 columbia_hazel_assets.each do |address|
   Asset.create!(street_address: address, city: "Vancouver", state: "WA", zip: "98665", fund: columbia, project: hazel)
 end
+
+user = User.first
+user.funds << columbia
+user.save
