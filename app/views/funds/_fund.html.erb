@@ -1,0 +1,13 @@
+<a href="<%= fund_path fund %>">
+  <div class="col-md-8 col-md-offset-2 text-center fund-index-container">
+    <div class="col-md-4 fund-index-image-container">
+      <img class="fund-image-index" src="<%= image_url 'sample_asset.jpg' %>" />
+    </div>
+    <div class="col-md-8">
+      <h3><%= fund.name %></h3>
+      <div class="progress" style="margin-bottom: 5px;">
+        <div class="progress-bar" role="progressbar" data-transitiongoal="85"></div>
+      </div>
+    </div>
+  </div>
+</a>
