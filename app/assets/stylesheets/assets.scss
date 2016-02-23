@@ -19,3 +19,12 @@
 #asset-index-subheader {
   text-decoration: underline;
 }
+
+.pagination > li > a{
+  color: black;
+}
+
+.pagination > .active > span {
+  background-color: #244415;
+  border-color: #244415;
+}
