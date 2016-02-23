@@ -20,8 +20,12 @@
   text-decoration: underline;
 }
 
-.pagination > li > a{
+.pagination > li > a {
   color: black;
+}
+
+.pagination > li > a:hover {
+  color: #244415
 }
 
 .pagination > .active > span, .pagination > .active > span:hover {
