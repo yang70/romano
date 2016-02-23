@@ -40,6 +40,7 @@
           <li class="dropdown">
             <a class="dropdown-toggle" href="#" data-toggle="dropdown">My Account<span class="caret"></span></a>
             <ul class="dropdown-menu">
+              <li id="nav-name"><%= current_user.first_name %> <%= current_user.last_name %></li>
               <li><a class="collapse-the-nav" href="<%= member_home_path %>">My Homepage</a></li>
               <li role="separator" class="divider"></li>
               <li><%= link_to("Sign Out", destroy_user_session_path, method: :delete, class: "collapse-the-nav") %></li>
