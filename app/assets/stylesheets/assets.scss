@@ -24,7 +24,7 @@
   color: black;
 }
 
-.pagination > .active > span {
+.pagination > .active > span, .pagination > .active > span:hover {
   background-color: #244415;
   border-color: #244415;
 }
