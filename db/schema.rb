@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221182502) do
+ActiveRecord::Schema.define(version: 20160227000618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,9 @@ ActiveRecord::Schema.define(version: 20160221182502) do
     t.string   "city"
     t.string   "state"
     t.string   "zip"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "completion_percentage", default: 0
   end
 
   add_index "assets", ["fund_id"], name: "index_assets_on_fund_id", using: :btree
@@ -32,8 +33,9 @@ ActiveRecord::Schema.define(version: 20160221182502) do
 
   create_table "funds", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "percent_funded", default: 0
   end
 
   create_table "funds_users", id: false, force: :cascade do |t|
