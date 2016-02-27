@@ -3,7 +3,7 @@
   <div class="col-md-6 col-md-offset-3">
     <h4 class="text-center">Total Project Completion Progress</h4>
     <div class="progress ">
-      <div class="progress-bar" data-transitiongoal="80"></div>
+      <div class="progress-bar" data-transitiongoal="<%= @project.construction_percentage %>"></div>
     </div>
   </div>
   <div class="col-md-6 col-md-offset-3">
@@ -25,7 +25,7 @@
       </div>
       <div class="col-md-4 col-xs-12">
         <div class="progress">
-          <div class="progress-bar progress-bar-danger" data-transitiongoal="80"></div>
+          <div class="progress-bar progress-bar-danger" data-transitiongoal="<%= asset.completion_percentage %>"></div>
         </div>
       </div>
     </div>

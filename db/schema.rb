@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 20160227000618) do
     t.string   "image_url"
     t.string   "status_plat_map_url"
     t.string   "status"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.float    "latitude"
     t.float    "longitude"
     t.integer  "fund_percentage"
-    t.integer  "construction_percentage"
+    t.integer  "construction_percentage", default: 0
   end
 
   create_table "users", force: :cascade do |t|
