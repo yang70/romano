@@ -4,4 +4,21 @@ class Asset < ActiveRecord::Base
 
   belongs_to :fund
   belongs_to :project
+
+  after_commit :update_project, on: [:create, :update]
+
+  private
+
+  def update_project
+    if self.project
+      project = self.project
+      assets = project.assets.all
+      total = 0
+
+      assets.each {|asset| total += asset.completion_percentage}
+      total_percentage = total.to_f / assets.length.to_f
+      project.construction_percentage = total_percentage.floor
+      project.save
+    end
+  end
 end
